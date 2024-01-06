@@ -148,6 +148,10 @@ body {
         width: 100%;
     }
 
+    .navigation-item {
+        padding: 4px 0;
+    }
+
     .hidden {
         display: none;
     }
