@@ -13,43 +13,45 @@
 </head>
 <body>
    <div class="container">
-
+   
    <h1 class="text-uppercase text-center py-2"><span class="text-white">Box</span> <span class="text-danger">style</span></h1>
    <!-- navigation menu -->
    <nav class="navigation-menu">
       <i class="fa-solid fa-bars text-white nav-icon"></i>
-      <ul class="navigation-item">
-         <li class="navigation-items"><a class="text-uppercase fs-5 text-danger" href="">border radius</a></li>
-         <li class="navigation-items"><a class="text-uppercase" href="">box-shadow</a></li>
-         <li class="navigation-items"><a class="text-uppercase" href="">transform 2d</a></li>
-         <li class="navigation-items"><a class="text-uppercase" href="">transform 3d</a></li>
+      <ul class="navigation-items hidden pe-4">
+         <li class="navigation-item fs-5 text-danger text-uppercase">border radius</li>
+         <li class="navigation-item text-uppercase">box-shadow</li>
+         <li class="navigation-item text-uppercase">transform 2d</li>
+         <li class="navigation-item text-uppercase">transform 3d</li>
       </ul>
    </nav>
+   </div>
    <!-- input range -->
-   <div class="row">
+<div class="container tabcontent">
+   <div class="row mt-4">
       <div class="col-12 range-container">
          <form class="field-group" action="#">
             <label for="radius" class="range-label text-white text-uppercase">Border radius</label>
-            <input type="range" class="range-field mb-3" id="radius" value="0" name="range" min="0" max="100">
+            <input type="range" class="range-field range borderradius mb-3" id="radius" value="0" name="range" min="0" max="100" data-index="all">
             <label for="topLeft" class="range-label text-white text-uppercase">top left</label>
-            <input type="range" class="range-field mb-3" id="topLeft" value="0" name="range" min="0" max="100">
+            <input type="range" class="range-field range mb-3" id="topLeft" value="0" name="range" min="0" max="100" data-index="tl">
             <label for="topRight" class="range-label text-white text-uppercase">top right</label>
-            <input type="range" class="range-field mb-3" id="topRight" value="0" name="range" min="0" max="100">
+            <input type="range" class="range-field range mb-3" id="topRight" value="0" name="range" min="0" max="100" data-index="tr">
             <label for="bottomRight" class="range-label text-white text-uppercase">Bottom right</label>
-            <input type="range" class="range-field mb-3" id="bottomRight" value="0" name="range" min="0" max="100">
+            <input type="range" class="range-field range mb-3" id="bottomRight" value="0" name="range" min="0" max="100" data-index="bl">
             <label for="bottomLeft" class="range-label text-white text-uppercase">Bottom left</label>
-            <input type="range" class="range-field mb-3" id="bottomLeft" value="0" name="range" min="0" max="100">
+            <input type="range" class="range-field range mb-3" id="bottomLeft" value="0" name="range" min="0" max="100" data-index="br">
          </form>
       </div>
       <div class="col-md-6 d-flex justify-content-center mt-5">
          <div class="code-box">
             <h5 class="px-3 py-4">
                <span class="text-warning">.box</span> <span class="text-warning">{</span> <br>
-                  <span class="text-white ps-3">border-radius:</span><span class="text-warning" id="qiymat">;</span> <br>
-                  <span class="text-white ps-3">border-top-left-radius:</span><span class="text-warning" id="qiymat">;</span> <br>
-                  <span class="text-white ps-3">border-top-right-radius:</span><span class="text-warning" id="qiymat">;</span> <br>
-                  <span class="text-white ps-3">border-radius:</span><span class="text-warning" id="qiymat">;</span> <br>
-                  <span class="text-white ps-3">border-radius:</span><span class="text-warning" id="qiymat">;</span> <br>
+                  <span class="text-white ps-3">border-radius:</span><span class="val px-2"> </span><span class="text-warning" id="qiymat">;</span> <br>
+                  <span class="text-white ps-3">border-top-left-radius:</span><span class="val px-2"> </span><span class="text-warning" id="qiymat">;</span> <br>
+                  <span class="text-white ps-3">border-top-right-radius:</span><span class="val px-2"> </span><span class="text-warning" id="qiymat">;</span> <br>
+                  <span class="text-white ps-3">border-bottom-right-radius:</span><span class="val px-2"> </span><span class="text-warning" id="qiymat">;</span> <br>
+                  <span class="text-white ps-3">border-bottom-left-radius:</span><span class="val px-2"> </span><span class="text-warning" id="qiymat">;</span> <br>
                <span class="text-warning">}</span>
             </h5>
          </div>
@@ -60,22 +62,47 @@
          </div>
       </div>
      </div>    
-    </div>
+</div>
+
+<!-- Box shadow -->
+<div class="container tabcontent">
+   <h1 class="text-center text-white">Box shadow</h1>
+</div>
+
+<!-- Transform 2d -->
+<div class="container tabcontent">
+   <h1 class="text-center text-white">Transform 2d</h1>
+</div>
+
+<!-- Transform 3d -->
+<div class="container tabcontent">
+   <h1 class="text-center text-white">Transform 3d</h1>
+</div>
+
     <!-- <form action="#">
-             <label>
-                <input type="text" disabled class="val"> Top Left <input type="range" min="0" max="100" step="1" value="0" class="range" data-index="tl">
-             </label>
-             <label>
-                <input type="text" disabled class="val"> Top right <input type="range" min="0" max="100" step="1" value="0" class="range" data-index="tr">
-             </label>
-             <label>
-                <input type="text" disabled class="val"> Bottom right <input type="range" min="0" max="100" step="1" value="0" class="range" data-index="br">
-             </label>
-             <label>
-                <input type="text" disabled class="val"> Bottom left <input type="range" min="0" max="100" step="1" value="0" class="range" data-index="bl">
-             </label>
-        </form>
-        <div class="box"></div> -->
+      <label for="all">
+          <input type="text" disabled class="val"> border radius
+          <input type="range" min="0" max="100" step="1" value="0" class="range" data-index="all" id="all">
+      </label>
+      <label for="tl">
+          <input type="text" disabled class="val"> Top Left
+          <input type="range" min="0" max="100" step="1" value="0" class="range" data-index="tl" id="tl">
+      </label>
+      <label for="tr">
+          <input type="text" disabled class="val"> Top right
+          <input type="range" min="0" max="100" step="1" value="0" class="range" data-index="tr" id="tr">
+      </label>
+      <label for="br">
+          <input type="text" disabled class="val"> Bottom right
+          <input type="range" min="0" max="100" step="1" value="0" class="range" data-index="br" id="br">
+      </label>
+      <label for="bl">
+          <input type="text" disabled class="val"> Bottom left
+          <input type="range" min="0" max="100" step="1" value="0" class="range" data-index="bl" id="bl">
+      </label>
+  </form>
+  <div class="box"></div> -->
+  
 
     <!-- bootstrap link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
