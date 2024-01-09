@@ -65,7 +65,7 @@ navIcon.addEventListener('click', () => {
                 item.classList.remove('text-danger', 'fs-5');
             })
         }
-        function showTabContent(i = 1) {
+        function showTabContent(i = 0) {
             tabsContent[i].classList.add('show', 'fade');
             tabsContent[i].classList.remove('hide');
             tabs[i].classList.add('text-danger', 'fs-5')
