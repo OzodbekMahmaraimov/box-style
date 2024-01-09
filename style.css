@@ -38,6 +38,12 @@ body {
     cursor: pointer;
     transition: 0.3s all;
 }
+
+/* border Radius */
+.box-shadow {
+    background: #FBC39D;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
 /* input range */
 .field-group {
     text-align: center;
@@ -120,16 +126,31 @@ body {
     background-color: #ff006e;
 }
 
+/* box-shadow */
+.code-box-2 {
+    width: 50%;
+    background-color: #003566;
+}
+
+.code-box-2 h5 {
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
 @media (max-width: 1200px) {
     
 }
 
 @media (max-width: 992px) {
     .code-box {
-        width: 90%;
+        width: 100% !important;
         height: 100%;
         background-color: #003566;
     } 
+
+    .code-box-2 {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -160,5 +181,12 @@ body {
         height: 30vh;
         width: 90%;
         /* margin: 1rem; */
+    }
+
+    /* box shadow */
+    .box-section {
+        margin-top: 2rem !important;
+        height: 35rem;
+
     }
 }

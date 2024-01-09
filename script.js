@@ -65,7 +65,7 @@ navIcon.addEventListener('click', () => {
                 item.classList.remove('text-danger', 'fs-5');
             })
         }
-        function showTabContent(i = 0) {
+        function showTabContent(i = 1) {
             tabsContent[i].classList.add('show', 'fade');
             tabsContent[i].classList.remove('hide');
             tabs[i].classList.add('text-danger', 'fs-5')
@@ -85,4 +85,45 @@ navIcon.addEventListener('click', () => {
                 })
             }
         })
+
+        // box shadow
+        const horizontalText = document.querySelectorAll('.shadow-text'),
+         horizantalShadow = document.querySelectorAll('#customRange'),
+         codeValueId = document.querySelectorAll('.valueId'),
+         boxShadow = document.querySelector('.box-shadow')
+
+         let r = 0, g = 0, b = 0;
+
+        horizantalShadow.forEach((input, index) => {
+            input.addEventListener('input', () => {
+                const opacityValue = horizantalShadow[5].value;
+                 if (index < horizontalText.length) {
+                    if(input.type == 'color') {
+                        let hexInput = input.value.trim();
+                        hexInput = hexInput.replace(/^#/, '');
+                        r = parseInt(hexInput.substring(0, 2), 16),
+                        g = parseInt(hexInput.substring(2, 4), 16),
+                        b = parseInt(hexInput.substring(4, 6), 16);
+                        let resultDiv = document.querySelectorAll('.rgba-shadow');
+                        resultDiv[0].textContent = r,
+                        resultDiv[1].textContent = g,
+                        resultDiv[2].textContent = b;
+                        horizontalText[index].textContent ='RGB(' + r + ', ' + g + ', ' + b + ')';
+                    } else horizontalText[index].textContent = input.value; 
+                } if (index < codeValueId.length) {
+                    codeValueId[index].textContent = input.value;
+                }
+                document.querySelector('.opacityValue').textContent = opacityValue;
+
+        
+                boxShadow.style.boxShadow = 
+                `${horizantalShadow[0].value}px
+                ${horizantalShadow[1].value}px
+                ${horizantalShadow[2].value}px
+                ${horizantalShadow[3].value}px
+                rgba(${r}, ${g}, ${b}, ${opacityValue})
+                   `
+            });
+        });
+
 })

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hex to RGB Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: RGB(2, 48, 71);
+    }
+
+    #colorInput {
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    #convertButton {
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <label for="colorInput">Enter Hex Color:</label>
+  <input type="text" id="colorInput" placeholder="#ffffff">
+  <button onclick="convertHexToRgb()" id="convertButton">Convert</button>
+
+  <div id="result"></div>
+
+  <script>
+    function convertHexToRgb() {
+      var hexInput = document.getElementById('colorInput').value.trim();
+
+      // Check if the input is a valid hex color code
+      if (!/^#([0-9A-Fa-f]{3}){1,2}$/.test(hexInput)) {
+        alert(
+          
+        );
+        return;
+      }
+
+      // Remove the '#' if present
+      hexInput = hexInput.replace(/^#/, '');
+
+      // Parse the hex values to decimal
+      var r = parseInt(hexInput.substring(0, 2), 16);
+      var g = parseInt(hexInput.substring(2, 4), 16);
+      var b = parseInt(hexInput.substring(4, 6), 16);
+
+      // Display the RGB values
+      var resultDiv = document.getElementById('result');
+      resultDiv.textContent = 'RGB(' + r + ', ' + g + ', ' + b + ')';
+    }
+  </script>
+
+</body>
+</html>
